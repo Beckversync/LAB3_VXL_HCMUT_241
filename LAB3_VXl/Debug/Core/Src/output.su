@@ -1,0 +1,3 @@
+output.c:14:6:display7SEG	16	static
+output.c:111:6:Updatebuffer	16	static
+output.c:122:6:Update7SEG	16	static
