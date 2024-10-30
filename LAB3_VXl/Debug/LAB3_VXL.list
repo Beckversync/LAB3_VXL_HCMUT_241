@@ -2121,7 +2121,7 @@ __STATIC_FORCEINLINE void __disable_irq(void)
 
 08000e74 <display7SEG>:
 
-#include "output.h"
+#include <output.h>
 
 int buffer7SEG[4];
 
