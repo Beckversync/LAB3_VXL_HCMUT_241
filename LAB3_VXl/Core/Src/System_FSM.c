@@ -13,6 +13,8 @@ int default_redlight;
 int default_yellowlight;
 int default_greenlight;
 
+
+
 void SystemFSM(){
 	switch(status){
 		case INIT:
@@ -67,6 +69,7 @@ void SystemFSM(){
 			}
 			if(!is_button_pressed(1) && button2_press){
 				redlight++;
+				greenlight++;
 				button2_press = 0;
 			}
 			// if button2 is pressed long 1s
@@ -78,6 +81,7 @@ void SystemFSM(){
 				if(flag[4] == 1){
 					setTimer(50, 4);
 					redlight++;
+					greenlight++;
 				}
 			}
 			// if button3 is pressed, turn back to mode 1 normal
@@ -131,6 +135,7 @@ void SystemFSM(){
 			}
 			if(!is_button_pressed(1) && button2_press){
 				yellowlight++;
+				redlight++;
 				button2_press = 0;
 			}
 			// if button2 is pressed long 1s
@@ -142,6 +147,7 @@ void SystemFSM(){
 				if(flag[4] == 1){
 					setTimer(50, 4);
 					yellowlight++;
+					redlight++;
 				}
 			}
 			// if button3 is pressed, turn back to mode 1 normal
@@ -195,6 +201,7 @@ void SystemFSM(){
 			}
 			if(!is_button_pressed(1) && button2_press){
 				greenlight++;
+				redlight++;
 				button2_press = 0;
 			}
 			// if button2 is pressed long 1s
@@ -206,6 +213,7 @@ void SystemFSM(){
 				if(flag[4] == 1){
 					setTimer(50, 4);
 					greenlight++;
+					redlight++;
 				}
 			}
 			// if button3 is pressed, turn back to mode 1 normal
